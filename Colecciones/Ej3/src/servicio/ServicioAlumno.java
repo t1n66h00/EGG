@@ -12,7 +12,6 @@ public class ServicioAlumno {
     private ArrayList<Alumno> listaAlumnos; // Creo la lista
     private Scanner leer; // Creo el Scanner para utilizar en toda mi clase
 
-    //Esta es una muy buena practica
     public ServicioAlumno() {
         this.listaAlumnos = new ArrayList<>(); // Creo el espacio en memoria del LISTA
         this.leer = new Scanner(System.in).useDelimiter("\n");// Cuando se invoca la clase, habilita el flujo de datos
@@ -30,9 +29,9 @@ public class ServicioAlumno {
         Integer nota3 = leer.nextInt();
         listaAlumnos.add(new Alumno(nombre, nota1, nota2, nota3));
     }
-    public void notaFinal(String nombre, Float promedio){
-      
-   Collections.sort(listaAlumnos, (Alumno objeto1, Alumno objeto2) -> objeto1.getPromedio().compareTo(objeto2.getPromedio()));    
-   
+    
+    public void notaFinal(){
+        
     }
+   
 }

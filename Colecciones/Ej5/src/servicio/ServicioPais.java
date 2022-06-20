@@ -34,12 +34,18 @@ public class ServicioPais {
     }
 
     public void eliminarPaises(String pais) {
-      
+      int count = 0;
         Iterator<Pais> it = listaPaises.iterator();
         while (it.hasNext()) {
             if (it.next().getPais().equals(pais)) {
                 it.remove();
+            }else{
+               count= count+1;
             }
+            
+        }
+        if (listaPaises.size() == count) {
+            System.out.println("pais inexistente");        
         }
     }    
     

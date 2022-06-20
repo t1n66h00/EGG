@@ -7,14 +7,12 @@ public class Alumno {
     private Integer nota1;
     private Integer nota2;
     private Integer nota3;
-    private Float promedio;
     
-    public Alumno(String nombre, Integer nota1, Integer nota2, Integer nota3, Float promedio) {
+    public Alumno(String nombre, Integer nota1, Integer nota2, Integer nota3) {
         this.nombre = nombre;
         this.nota1 = nota1;
         this.nota2 = nota2;
         this.nota3 = nota3;
-        this.promedio = promedio;
     }
     
     
@@ -42,19 +40,9 @@ public class Alumno {
     public void setNota3(Integer nota3) {
         this.nota3 = nota3;
     }
-    public Float getPromedio() {
-        return promedio;
-    }
-    public void setPromedio(Float promedio) {
-        this.promedio = promedio;
-    }
-    
-    public void promedio() {
-        float promedio=(nota1+nota2+nota3)/3;
-    }
     
     @Override
     public String toString() {
-        return "Alumno{" + "promedio: " + promedio + '}';
+        return "Alumno: " + nombre;
     }
 }
